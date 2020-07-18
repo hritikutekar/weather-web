@@ -8,6 +8,7 @@ import {
   getAddressFromLatLon,
   getAddressFromName,
 } from "./services/opencagedata-api.service";
+import { isMobile } from "react-device-detect";
 
 export default class App extends React.Component {
   constructor() {
@@ -87,12 +88,14 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
-    this.getMyPosition();
-    this.getWeatherData(18.5204, 73.8567);
-    this.getYesterdayData();
+    if (!isMobile) {
+      this.getMyPosition();
+      this.getWeatherData(18.5204, 73.8567);
+      this.getYesterdayData();
 
-    const intervalId = setInterval(this.timer, 1000);
-    this.setState({ intervalId });
+      const intervalId = setInterval(this.timer, 1000);
+      this.setState({ intervalId });
+    }
   }
 
   componentWillUnmount() {
@@ -101,6 +104,27 @@ export default class App extends React.Component {
   }
 
   render() {
+    if (isMobile) {
+      return (
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: 20,
+            boxSizing: "border-box",
+            display: "flex",
+          }}
+        >
+          <h1 style={{ textAlign: "center" }}>
+            <a href='https://google.com'>Download</a> weather app for your
+            device.
+          </h1>
+        </div>
+      );
+    }
+
     if (
       this.state.weatherData === undefined ||
       this.state.yesterdayData === undefined ||
