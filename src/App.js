@@ -104,6 +104,7 @@ export default class App extends React.Component {
   }
 
   render() {
+    // For small screen devices.
     if (isMobile) {
       return (
         <div
