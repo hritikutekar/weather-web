@@ -1,0 +1,322 @@
+.homepage {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.homepage__left {
+  flex: 0.3;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homepage__right {
+  flex: 1;
+  background-color: #f4f4f6;
+  padding: 15px 20px;
+  overflow-y: scroll;
+}
+
+/* LEFT SIDE PANEL STYLES */
+.homepage__left_header {
+  display: flex;
+  flex-direction: row;
+}
+.homepage__search {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+.search_icon {
+  width: 20px;
+  height: 20px;
+}
+.search_input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0px 10px;
+  color: #000000;
+  font-size: 14px;
+}
+.search_input::placeholder {
+  color: #000000;
+}
+.location_icon {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 28px;
+  background-color: #f4f4f6;
+  cursor: pointer;
+}
+.homepage__body_weather_icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__body_weather_icon {
+  flex: 1;
+  object-fit: cover;
+}
+.homeage__body_header_text {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0px;
+  margin-top: 10px;
+}
+.homeage__body_para_text {
+  font-size: 20px;
+  margin: 0px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.homeage__body_para_text span {
+  color: #b8b8b8;
+}
+.divider_line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.homepage__list_view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list_view_icon {
+  width: 25px;
+  height: 25px;
+  color: #b8b8b8;
+}
+.list_view_title {
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.city {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.homeage__city_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  flex: 1;
+  color: #ffffff;
+  overflow: hidden;
+}
+.city_name_container {
+  flex: 1;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.city_name {
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+/* RIGHT SIDE PANEL STYLES */
+.homepage__right_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header_circle_button {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 0px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  -webkit-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+}
+.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.LOGO_container {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+}
+.LOGO {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+.homepage__week_view {
+  display: flex;
+  padding-top: 20px;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
+.homepage__week_view::-webkit-scrollbar {
+  display: none;
+}
+.todays_highlights {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.todays_highlights_header {
+  margin-top: 25px;
+  font-size: 20px;
+}
+.highlights {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* WEEK TEMP CARD STYLES */
+.week_temp_card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 120px;
+  min-height: 150px;
+  border-radius: 15px;
+  margin-right: 15px;
+  -webkit-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+}
+.week_temp_card_week {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.week_temp_card_icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.week_temp_card_temp {
+  display: flex;
+}
+.week_temp_card_max {
+  color: #000000;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 4px;
+}
+.week_temp_card_min {
+  color: #b8b8b8;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* HIGHLIGHT CARD STYLES */
+.highlight_card {
+  box-sizing: border-box;
+  min-width: 220px;
+  min-height: 150px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  -webkit-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 37px -20px rgba(0, 0, 0, 0.2);
+}
+.highlight_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b8b8b8;
+  margin: 0px;
+}
+.highlight_value {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.value {
+  margin: 0px 10px 0px 0px;
+  font-size: 50px;
+  font-weight: 500;
+}
+.unit {
+  margin: 0px 0px 10px 0px;
+  font-size: 25px;
+}
+.highlight_status {
+  margin: 0px;
+  font-weight: 500;
+}
+
+.sun_icon {
+  background: rgb(254, 218, 65);
+  background: radial-gradient(
+    circle,
+    rgba(254, 218, 65, 1) 0%,
+    rgba(251, 176, 70, 1) 100%
+  );
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+/* Circular progress bar */
+.circular_progress_container {
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  border-radius: 15px;
+}
+.circular_progress {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 2.5px;
+  background-color: #2f3bcb;
+  border-radius: 12.5px;
+  margin: 0px 3.5px;
+  transition: all 0.4s;
+}
